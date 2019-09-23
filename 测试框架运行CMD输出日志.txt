@@ -1,0 +1,101 @@
+***获取yaml文件../mockserver/mock_data.yml数据***
+***获取yaml文件数据----完毕***
+2019-09-20 18:50:10,422 - root - INFO - !!!------------Test case integrity check: File.Sheet = ["../testcase/case_01.xlsx"."pre_check_ok"] Start ... ....
+2019-09-20 18:50:10,423 - root - INFO -  ---------------Checking success!
+
+2019-09-20 18:50:10,423 - root - INFO - case_counts:5
+2019-09-20 18:50:13,423 - root - INFO - 
+.................case_01 testing ..............
+2019-09-20 18:50:13,439 - root - INFO - 
+  |req_url===========>>>mock://bjw.iapppay.com/v1/sdk/login
+  |req.data==========>>>{"name":"bukw_1", "pwd":"123456"}
+  |resp.status_code==>>>200
+  |resp.headers======>>>{'header': 'This Mock_server header'}
+  |resp.text=========>>>{'code': 0, 'data': {'uid': '10001', 'username': 'bukw_1', 'token': 'aaabbbb_bukw_1'}}
+ 
+---L1-----run_test_excel.py:run_onecase():无需依赖的用例请求响应： <Response [200]> {'code': 0, 'data': {'uid': '10001', 'username': 'bukw_1', 'token': 'aaabbbb_bukw_1'}} <class 'str'>
+write_compareResult_into_excel-----{"code": 0, "data": {"uid": "10001", "username": "bukw_1", "token": "aaabbbb_bukw_1"}}:<class 'str'>-------{"code": 0, "data": {"uid": "10001", "username": "bukw_1", "token": "aaabbbb_bukw_1"}}:<class 'str'>
+[] [] []
+---multidata_write_cell---文件：../testcase/case_01.xlsx--Sheet:pre_check_ok,索引(2,12),单元格 (1.11) 写入数据 "PASS"
+---multidata_write_cell---文件：../testcase/case_01.xlsx--Sheet:pre_check_ok,索引(2,13),单元格 (1.12) 写入数据 "{"code": 0, "data": {"uid": "10001", "username": "bukw_1", "token": "aaabbbb_bukw_1"}}"
+2019-09-20 18:50:15,581 - root - INFO - -----------------当前用例[case_01]执行完成,测试结果[PASS]-----------------
+2019-09-20 18:50:18,581 - root - INFO - 
+.................case_02 testing ..............
+2019-09-20 18:50:18,582 - root - INFO - [caseid:"case_01"]  is no need to rely on any testcases.
+>>>case_02<<< dependlist is ['case_01']:
+2019-09-20 18:50:18,644 - root - INFO - 
+  |req_url===========>>>mock://bjw.iapppay.com/v1/sdk/login
+  |req.data==========>>>{'name': 'bukw_1', 'pwd': '123456'}
+  |resp.status_code==>>>200
+  |resp.headers======>>>{'header': 'This Mock_server header'}
+  |resp.text=========>>>{'code': 0, 'data': {'uid': '10001', 'username': 'bukw_1', 'token': 'aaabbbb_bukw_1'}}
+ 
+write_compareResult_into_excel-----{"code": 0, "data": {"uid": "10001", "username": "bukw_1", "token": "aaabbbb_bukw_1"}}:<class 'str'>-------{"code": 0, "data": {"uid": "10001", "username": "bukw_1", "token": "aaabbbb_bukw_1"}}:<class 'str'>
+[] [] []
+---multidata_write_cell---文件：../testcase/case_01.xlsx--Sheet:pre_check_ok,索引(3,12),单元格 (2.11) 写入数据 "PASS"
+---multidata_write_cell---文件：../testcase/case_01.xlsx--Sheet:pre_check_ok,索引(3,13),单元格 (2.12) 写入数据 "{"code": 0, "data": {"uid": "10001", "username": "bukw_1", "token": "aaabbbb_bukw_1"}}"
+2019-09-20 18:50:24,793 - root - INFO - 
+.................case_03 testing ..............
+2019-09-20 18:50:24,794 - root - INFO - [caseid:"case_01"]  is no need to rely on any testcases.
+>>>case_03<<< dependlist is ['case_01', 'case_02']:
+2019-09-20 18:50:24,848 - root - INFO - 
+  |req_url===========>>>mock://bjw.iapppay.com/v1/sdk/login
+  |req.data==========>>>{'name': 'bukw_1', 'pwd': 'aaabbbb_bukw_1'}
+  |resp.status_code==>>>200
+  |resp.headers======>>>{'header': 'This Mock_server header'}
+  |resp.text=========>>>{'code': 0, 'msg': 'bukw_1 aaaabbb_bukw_1 mock Login success'}
+ 
+write_compareResult_into_excel-----{"code": 0,"msg":"mock success"}:<class 'str'>-------{"code": 0, "msg": "bukw_1 aaaabbb_bukw_1 mock Login success"}:<class 'str'>
+[] [] [{'replace': '/msg', 'value': 'mock success', 'prev': 'bukw_1 aaaabbb_bukw_1 mock Login success'}]
+---multidata_write_cell---文件：../testcase/case_01.xlsx--Sheet:pre_check_ok,索引(4,12),单元格 (3.11) 写入数据 "FAILED"
+---multidata_write_cell---文件：../testcase/case_01.xlsx--Sheet:pre_check_ok,索引(4,13),单元格 (3.12) 写入数据 "{"code": 0, "msg": "bukw_1 aaaabbb_bukw_1 mock Login success"}"
+---multidata_write_cell---文件：../testcase/case_01.xlsx--Sheet:pre_check_ok,索引(4,14),单元格 (3.13) 写入数据 "{"diffresult": "diff", "result_detals": {"morethan_actual": [], "lessthan_actual": [], "diff_exp2act": [{"replace": "/msg", "value": "mock success", "prev": "bukw_1 aaaabbb_bukw_1 mock Login success"}]}}"
+2019-09-20 18:50:30,978 - root - INFO - 
+.................case_04 testing ..............
+2019-09-20 18:50:31,026 - root - INFO - 
+  |req_url===========>>>mock://bjw.iapppay.com/v1/sdk/login
+  |req.data==========>>>{"name":"bukw_1", "pwd":"123456"}
+  |resp.status_code==>>>200
+  |resp.headers======>>>{'header': 'This Mock_server header'}
+  |resp.text=========>>>{'code': 0, 'data': {'uid': '10001', 'username': 'bukw_1', 'token': 'aaabbbb_bukw_1'}}
+ 
+---L1-----run_test_excel.py:run_onecase():无需依赖的用例请求响应： <Response [200]> {'code': 0, 'data': {'uid': '10001', 'username': 'bukw_1', 'token': 'aaabbbb_bukw_1'}} <class 'str'>
+write_compareResult_into_excel-----{"code": 0, "data": {"uid": "10001", "username": "bukw_1", "token": "aaabbbb_bukw_1"}}:<class 'str'>-------{"code": 0, "data": {"uid": "10001", "username": "bukw_1", "token": "aaabbbb_bukw_1"}}:<class 'str'>
+[] [] []
+---multidata_write_cell---文件：../testcase/case_01.xlsx--Sheet:pre_check_ok,索引(5,12),单元格 (4.11) 写入数据 "PASS"
+---multidata_write_cell---文件：../testcase/case_01.xlsx--Sheet:pre_check_ok,索引(5,13),单元格 (4.12) 写入数据 "{"code": 0, "data": {"uid": "10001", "username": "bukw_1", "token": "aaabbbb_bukw_1"}}"
+2019-09-20 18:50:33,167 - root - INFO - -----------------当前用例[case_04]执行完成,测试结果[PASS]-----------------
+2019-09-20 18:50:36,168 - root - INFO - 
+.................case_05 testing ..............
+2019-09-20 18:50:36,169 - root - INFO - [caseid:"case_04"]  is no need to rely on any testcases.
+>>>case_05<<< dependlist is ['case_04']:
+2019-09-20 18:50:36,232 - root - INFO - 
+  |req_url===========>>>mock://bjw.iapppay.com/v1/sdk/login
+  |req.data==========>>>{'name': 'bukw_1', 'pwd': '123456'}
+  |resp.status_code==>>>200
+  |resp.headers======>>>{'header': 'This Mock_server header'}
+  |resp.text=========>>>{'code': 0, 'data': {'uid': '10001', 'username': 'bukw_1', 'token': 'aaabbbb_bukw_1'}}
+ 
+write_compareResult_into_excel-----{"code": 330, "data": {"uid": "10001", "username": "bukw_1", "token": "aaabbbb_bukw_1"}}:<class 'str'>-------{"code": 0, "data": {"uid": "10001", "username": "bukw_1", "token": "aaabbbb_bukw_1"}}:<class 'str'>
+[] [] [{'replace': '/code', 'value': 330, 'prev': 0}]
+---multidata_write_cell---文件：../testcase/case_01.xlsx--Sheet:pre_check_ok,索引(6,12),单元格 (5.11) 写入数据 "FAILED"
+---multidata_write_cell---文件：../testcase/case_01.xlsx--Sheet:pre_check_ok,索引(6,13),单元格 (5.12) 写入数据 "{"code": 0, "data": {"uid": "10001", "username": "bukw_1", "token": "aaabbbb_bukw_1"}}"
+---multidata_write_cell---文件：../testcase/case_01.xlsx--Sheet:pre_check_ok,索引(6,14),单元格 (5.13) 写入数据 "{"diffresult": "diff", "result_detals": {"morethan_actual": [], "lessthan_actual": [], "diff_exp2act": [{"replace": "/code", "value": 330, "prev": 0}]}}"
+2019-09-20 18:50:39,376 - root - INFO - ****************../testcase/case_01.xlsx.pre_check_ok testing finish!****************
+
+
+{"diffresult": "diff", "result_detals": {"morethan_actual": [], "lessthan_actual": [], "diff_exp2act": [{"replace": "/msg", "value": "mock success", "prev": "bukw_1 aaaabbb_bukw_1 mock Login success"}]}}
+
+{"diffresult": "diff", "result_detals": {"morethan_actual": [], "lessthan_actual": [], "diff_exp2act": [{"replace": "/code", "value": 330, "prev": 0}]}}
+['create_report_test.py', 'run_onecase.py', 'run_test_excel.py', '__pycache__']
+Look for file 'E:/IapppayTest/Iapppay_SVN/Test/BKW/IapppayBJ_INTF_V0.02/testcase/TempTestCase/pre_check_ok_InfTest_20190920-185039.py',is exists = True
+E:/IapppayTest/Iapppay_SVN/Test/BKW/IapppayBJ_INTF_V0.02/testcase/TempTestCase/pre_check_ok_InfTest_20190920-185039.py
+ok test_case_01 (__main__.Test_pre_check_ok)
+ok test_case_02 (__main__.Test_pre_check_ok)
+F  test_case_03 (__main__.Test_pre_check_ok)
+ok test_case_04 (__main__.Test_pre_check_ok)
+F  test_case_05 (__main__.Test_pre_check_ok)
+***获取yaml文件../intf_config/intf.yaml数据***
+***获取yaml文件数据----完毕***
+[pre_check_ok]_接口测试邮件,发送成功!
+[Finished in 34.7s]
